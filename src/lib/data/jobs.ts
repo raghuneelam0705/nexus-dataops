@@ -1,0 +1,50 @@
+import type { ArchiveJob } from "@/types";
+
+export const archiveJobs: ArchiveJob[] = [
+  {
+    id: "JOB-2001",
+    name: "Customer Data Archive",
+    assetId: "AST-1001",
+    status: "success",
+    recordsProcessed: 125000,
+    startedAt: "2026-10-30T06:00:00Z",
+    durationSeconds: 420,
+  },
+  {
+    id: "JOB-2002",
+    name: "Application Log Archive",
+    assetId: "AST-1002",
+    status: "running",
+    recordsProcessed: 85000,
+    startedAt: "2026-10-30T08:15:00Z",
+    durationSeconds: null,
+  },
+  {
+    id: "JOB-2003",
+    name: "Employee Records Archive",
+    assetId: "AST-1003",
+    status: "failed",
+    recordsProcessed: 0,
+    startedAt: "2026-10-29T22:00:00Z",
+    durationSeconds: 95,
+    errorMessage: "Source connection timed out",
+  },
+  {
+    id: "JOB-2004",
+    name: "Product Analytics Archive",
+    assetId: "AST-1004",
+    status: "queued",
+    recordsProcessed: 0,
+    startedAt: null,
+    durationSeconds: null,
+  },
+  {
+    id: "JOB-2005",
+    name: "Product Catalog Archive",
+    assetId: "AST-1005",
+    status: "success",
+    recordsProcessed: 42000,
+    startedAt: "2026-10-28T14:30:00Z",
+    durationSeconds: 180,
+  },
+];
