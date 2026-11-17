@@ -18,7 +18,7 @@ export async function getAudits(
   });
 
   const baseUrl = process.env.VERCEL
-    ? `https://${process.env.NEXT_PUBLIC_APP_URL}`
+    ? `https://${process.env.VERCEL_URL}`
     : "http://localhost:3001";
   
 
