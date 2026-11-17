@@ -17,14 +17,8 @@ export async function getAudits(
     pageSize: String(pageSize),
   });
 
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL;
-
-  if (!baseUrl) {
-    throw new Error("NEXT_PUBLIC_APP_URL is not configured");
-  }
-
   const response = await fetch(
-    `${baseUrl}/api/audit?${params.toString()}`
+    `/api/audit?${params.toString()}`
   );
 
   if (!response.ok) {
