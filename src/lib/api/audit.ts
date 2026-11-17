@@ -17,7 +17,10 @@ export async function getAudits(
     pageSize: String(pageSize),
   });
 
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL;
+  const baseUrl = process.env.VERCEL
+    ? `https://${process.env.NEXT_PUBLIC_APP_URL}`
+    : "http://localhost:3001";
+  
 
   if (!baseUrl) {
     throw new Error("NEXT_PUBLIC_APP_URL is not configured");
