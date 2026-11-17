@@ -23,7 +23,7 @@ export async function getAudits(
   
 
   if (!baseUrl) {
-    throw new Error("NEXT_PUBLIC_APP_URL is not configured");
+    throw new Error("VERCEL_URL is not configured");
   }
 
   const response = await fetch(
